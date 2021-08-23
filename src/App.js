@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components'
+
+import Chart from './components/Chart'
+import NewsFeed from './components/NewsFeed'
+import Footer from './components/Footer'
+
+
+const Wrapper = styled.body`
+  display: flex;
+  flex-direction: column;
+  background: white;
+  margin: 0;
+  height: 100vh;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper className="App">
+      <Chart />
+      <NewsFeed />
+      <Footer />
+    </Wrapper>
   );
 }
 
